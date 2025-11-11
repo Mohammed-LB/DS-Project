@@ -1,0 +1,13 @@
+data = {
+    'Name': ['Alice', 'Bob', 'Carol', 'David'],
+    'Marital_Status': ['Single', 'Married', 'Divorced', 'Married'],
+    'Occupation': ['Teacher', 'Engineer', 'Doctor', 'Artist']
+}
+
+df = pd.DataFrame(data)
+
+# Assign numeric codes
+df['Marital_Code'] = df['Marital_Status'].astype('category').cat.codes
+df['Occupation_Code'] = df['Occupation'].astype('category').cat.codes
+
+print(df)
