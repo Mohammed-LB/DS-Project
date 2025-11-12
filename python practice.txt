@@ -1,0 +1,13 @@
+data = {
+    'Age': [16, 17, 16, 18, 17, 16, 19, 18, 17, 16],
+    'Sex': ['Male', 'Female', 'Female', 'Male', 'Female', 'Male', 'Male', 'Female', 'Male', 'Female'],
+    'Education_Level': ['High School', 'High School', 'High School', 'College', 'College', 'High School', 
+                        'College', 'College', 'High School', 'High School'],
+    'Score': [75, 88, 92, 80, 85, 70, 78, 90, 76, 95]
+}
+df = pd.DataFrame(data)
+print(df)
+print("\nSummary statistics:")
+print(df.groupby('Sex')['Score'].describe())
+print("\nAverage Score by Education Level:")
+print(df.groupby('Education_Level')['Score'].mean())
