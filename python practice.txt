@@ -8,6 +8,7 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 print("\nSummary statistics:")
+
 print(df.groupby('Sex')['Score'].describe())
 print("\nAverage Score by Education Level:")
 print(df.groupby('Education_Level')['Score'].mean())
